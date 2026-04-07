@@ -929,7 +929,7 @@
 .ig-viewport {
   overflow: hidden;
   position: relative;
-  max-width: var(--site-max);
+  width: min(100%, var(--site-max));
   margin: 0 auto;
 }
 
@@ -942,6 +942,7 @@
 
 .ig-card {
   flex: 0 0 calc(44% - 10px);
+  max-width: 610px;
   background: var(--warm);
   border-radius: 3px;
   overflow: hidden;
