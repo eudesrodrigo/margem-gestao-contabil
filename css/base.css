@@ -1,0 +1,138 @@
+/* ═══════════════════════════════════════════
+   BASE — Design Tokens, Reset, Typography, Utilities
+   ═══════════════════════════════════════════ */
+
+/* ── Design Tokens ── */
+:root {
+  /* Color */
+  --teal:        #162E2E;
+  --teal-mid:    #1C3838;
+  --teal-deep:   #0E2020;
+  --copper:      #9B5636;
+  --copper-h:    #B36840;
+  --beige:       #EADCD4;
+  --beige-l:     #EEE0D8;
+  --warm:        #F5EEEB;
+  --text:        #162E2E;
+  --text-mid:    #4A6060;
+
+  /* Type */
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans:  'Montserrat', sans-serif;
+
+  /* Scale */
+  --t-xs:   10.5px;
+  --t-sm:   12.5px;
+  --t-base: 14.5px;
+  --t-md:   16px;
+
+  /* Spacing */
+  --sp-xs:   8px;
+  --sp-sm:   16px;
+  --sp-md:   28px;
+  --sp-lg:   48px;
+  --sp-xl:   80px;
+  --sp-2xl:  100px;
+
+  /* Layout */
+  --pad-x: 64px;
+
+  /* Easing */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--sans);
+  font-size: var(--t-base);
+  color: var(--text);
+  background: var(--warm);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a { color: inherit; }
+ul, ol { list-style: none; }
+button { font-family: inherit; }
+
+/* ── Skip Navigation ── */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  background: var(--copper);
+  color: var(--warm);
+  padding: 8px 16px;
+  font-size: var(--t-sm);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0 0 2px 2px;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+.skip-nav:focus {
+  top: 0;
+}
+
+/* ── Section Wrapper ── */
+.section {
+  padding: var(--sp-2xl) var(--pad-x);
+}
+
+/* ── Section Label & Title ── */
+.s-label {
+  display: block;
+  font-family: var(--sans);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--copper);
+  margin-bottom: 14px;
+}
+
+.s-title {
+  font-family: var(--serif);
+  font-size: clamp(26px, 2.8vw, 44px);
+  font-weight: 700;
+  line-height: 1.16;
+  color: var(--text);
+}
+
+.s-title--light { color: var(--warm); }
+
+/* ── Divider List Item ── */
+.dot-sep {
+  color: rgba(22, 46, 46, 0.2);
+  font-size: 18px;
+  line-height: 1;
+  user-select: none;
+}
+
+/* ── Fade-In on Scroll ── */
+.fi {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s var(--ease), transform 0.55s var(--ease);
+}
+.fi.visible { opacity: 1; transform: none; }
+.fi[data-delay="1"] { transition-delay: 0.1s; }
+.fi[data-delay="2"] { transition-delay: 0.2s; }
+.fi[data-delay="3"] { transition-delay: 0.3s; }
