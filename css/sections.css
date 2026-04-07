@@ -12,7 +12,7 @@
   background: var(--teal);
   display: flex;
   align-items: center;
-  padding: 100px var(--pad-x) 80px;
+  padding: 100px var(--pad-safe) 80px;
   position: relative;
   overflow: hidden;
 }
@@ -163,7 +163,7 @@
 }
 
 .trust-bar__inner {
-  padding: 20px var(--pad-x);
+  padding: 20px var(--pad-safe);
   display: flex;
   align-items: center;
   gap: 28px;
@@ -907,7 +907,7 @@
 }
 
 .ig-header {
-  padding: 0 var(--pad-x) var(--sp-lg);
+  padding: 0 var(--pad-safe) var(--sp-lg);
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -1015,7 +1015,7 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
-  padding: 2rem var(--pad-x) var(--sp-xl);
+  padding: 2rem var(--pad-safe) var(--sp-xl);
 }
 
 .ig-arrow {

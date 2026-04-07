@@ -35,7 +35,9 @@
   --sp-2xl:  100px;
 
   /* Layout */
-  --pad-x: 64px;
+  --pad-x:    64px;
+  --site-max: 1400px;
+  --pad-safe: max(var(--pad-x), calc((100vw - var(--site-max)) / 2));
 
   /* Easing */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -93,7 +95,7 @@ button { font-family: inherit; }
 
 /* ── Section Wrapper ── */
 .section {
-  padding: var(--sp-2xl) var(--pad-x);
+  padding: var(--sp-2xl) var(--pad-safe);
 }
 
 /* ── Section Label & Title ── */
