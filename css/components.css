@@ -326,3 +326,43 @@
   .footer__grid { grid-template-columns: 1fr; gap: 28px; }
   .wa-float { bottom: 20px; right: 20px; }
 }
+
+/* ════════════════════
+   CREDENTIAL PILLS
+   ════════════════════ */
+.credential-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.pill {
+  background: rgba(22, 46, 46, 0.08);
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  font-size: 0.7rem;
+  padding: 2px 10px;
+  border-radius: 99px;
+  font-weight: 500;
+}
+
+/* ════════════════════
+   CONTATO HEADLINE
+   ════════════════════ */
+.contato-headline {
+  font-family: var(--serif);
+  font-size: clamp(18px, 2.5vw, 26px);
+  font-weight: 600;
+  color: var(--copper);
+  margin-bottom: 0.5rem;
+}
+
+/* ════════════════════
+   BUTTON — large variant
+   ════════════════════ */
+.btn--large {
+  padding: 18px 40px;
+  font-size: 13px;
+}
