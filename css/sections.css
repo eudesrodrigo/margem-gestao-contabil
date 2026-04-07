@@ -929,6 +929,8 @@
 .ig-viewport {
   overflow: hidden;
   position: relative;
+  max-width: var(--site-max);
+  margin: 0 auto;
 }
 
 .ig-track {
